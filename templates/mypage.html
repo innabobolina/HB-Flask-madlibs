@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}My awesome page title{% endblock %}
+{% block content %}
+    <h1>I'm a header!</h1>
+    <body>
+    Hi {{ person }}! I think you're {{ compliment }}!
+    <form action="/game">
+    <br><br>Would you like to play a game?
+    <input type="radio" name="YesNo" value="Yes">Yes
+    <input type="radio" name="YesNo" value="No">No
+    <input type="submit">
+    </form></body>
+{% endblock %}

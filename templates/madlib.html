@@ -4,7 +4,22 @@
     <title>MADLIB</title>
 </head>
 <body>
-    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.<br>When {{ person }} went to pick it up, it burst into flames in a totally {{ adjective }} way.
+    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.<br>When {{ person }} went to pick it up, it burst into flames in a totally {{ adjective }} way. This was a    
+    {% if animal %}
+       <!-- {% for x in animal %}
+            {{ x }}
+        {% endfor %} -->
+        {{ animal|join(', ') }}
+    {% endif %}!
+    
+    {% if animal %}
+       <ul>
+        {% for x in animal %}
+            <li> {{ x }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     </p>
 </body>
 </html>

@@ -37,7 +37,7 @@ def greet_person():
 
     compliment = choice(AWESOMENESS)
 
-    return render_template("compliment.html",
+    return render_template("mypage.html",
                            person=player,
                            compliment=compliment)
 
@@ -61,12 +61,16 @@ def show_madlib():
     color = request.args.get("color")
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
+    animal = request.args.getlist("animal")
 
-    return render_template("madlib.html",
+    #how to randomly choose something 
+    options = choice(["madlib.html", "madlib_1.html"])
+    return render_template(options,
                            person=person,
                            color=color,
                            noun=noun,
-                           adjective=adjective)
+                           adjective=adjective,
+                           animal= animal)
 
 
 

@@ -2,15 +2,23 @@
 <html>
 <head>
     <title>Games</title>
+    <link rel="stylesheet" href="/static/madlibs.css">
 </head>
 <body>
-This is the game.
+    <h1>This is the game.</h1>
     <form action="/madlib">
         PERSON?<input type="text" name="person" value="Ballonicorn">
-        COLOR?<input type="text" name="color" value="purple"><br><br>
+        COLOR?<input type="color" name="color" value=""><br><br>
         NOUN?<input type="text" name="noun" value="laptop">
         ADJECTIVE?<input type="text" name="adjective" value="fun"><br><br>
+        Only pick one animal:<br>
+        <input type="checkbox" name="animal" value="dog">Dog
+        <input type="checkbox" name="animal" value="cat">Cat
+        <input type="checkbox" name="animal" value="turtle">Turtle
         <input type="submit">
     </form>
+<!--     <script>
+        document.body.style.backgroundColor = "red";
+    </script> -->
 </body>
 </html>
